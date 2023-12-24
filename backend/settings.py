@@ -31,17 +31,25 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    # default apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
     
+    # installed apps
+    'rest_framework',
+    "rest_framework_swagger",
+    "drf_yasg",
+
+    # my apps 
     'users',
     'quran',
     'reel',
+
 
 ]
 
