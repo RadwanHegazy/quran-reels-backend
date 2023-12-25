@@ -6,7 +6,7 @@ from reel.models import Reel
 
 
 @decorators.api_view(['GET'])
-@decorators.permission_classes([permissions.AllowAny])
+@decorators.permission_classes([permissions.IsAuthenticated])
 def RetreiveReel (request, reel_uuid) : 
     try : 
 
