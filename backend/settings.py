@@ -153,3 +153,7 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=2),
    }
+
+
+# we don't need it , so after finishing i will remove it
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10000000000000
