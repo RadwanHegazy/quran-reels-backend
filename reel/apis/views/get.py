@@ -1,4 +1,4 @@
-from rest_framework import decorators, status
+from rest_framework import decorators, status, permissions
 from rest_framework.response import Response
 from reel.apis.serializers import AllReelsSerializer
 from reel.models import Reel
@@ -6,6 +6,7 @@ from reel.models import Reel
 
 
 @decorators.api_view(['GET'])
+@decorators.permission_classes([permissions.IsAuthenticated])
 def GetReels (request) : 
     try : 
         query = Reel.objects.order_by('-date')

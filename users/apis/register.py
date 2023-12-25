@@ -13,9 +13,14 @@ def RegisterView (request) :
             email = request.data.get('email',None),
             password = request.data.get('password',None),
             full_name = request.data.get('full_name',None),
-            picture = request.data.get('picture',None),
         )
 
+        picture = request.data.get('picture',None)
+
+        if picture is not None :
+            user.picture = picture
+        
+        user.save()
 
         tokens = RefreshToken.for_user(user=user)
 
