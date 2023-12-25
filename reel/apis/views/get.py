@@ -10,6 +10,7 @@ from reel.models import Reel
 def GetReels (request) : 
     try : 
         query = Reel.objects.order_by('-date')
+        
         serializer = AllReelsSerializer(query,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
     except Exception as error :
