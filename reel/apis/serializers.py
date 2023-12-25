@@ -35,6 +35,7 @@ class ReelSerializer (serializers.ModelSerializer) :
 
 class AllReelsSerializer (serializers.ModelSerializer) : 
     user = UserSerializer()
+    image = ImageSerializer()
     class Meta : 
         model = Reel
-        fields = ('uuid','user',)
+        fields = ('uuid','user','image',)
